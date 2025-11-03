@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque</title>
+</head>
+<style>
+    /* body {
+        padding: 0;
+        margin: 0;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        border-radius:20px  ;
+    }
+   .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 25px;
+    padding: 20px;
+    margin-bottom: 30px;
+   }
+   .header ul {
+    display: flex;
+    gap: 20px;
+    
+    text-align: center;
+
+   }
+   .header ul li {
+    list-style: none;
+   
+
+    
+   }
+   .header ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+   
+   }
+   #form-livre {
+    max-width: 700px;
+    border-radius: 20px;
+    background-color: rgb(5, 60, 156);
+    padding: 30px ;
+    margin: auto;
+    margin-bottom: 40px;
+    color: white;
+
+    
+   }
+   h2 {
+    margin-bottom: 30px;
+    padding-bottom: 20px ;
+   }
+    
+   
+   input{
+    display: flex;
+    border-radius: 20px;
+    border:  solid 1px #ddd;
+    padding: 15px;
+    width: 50%;
+    display: flex;
+    margin : auto;
+    margin-bottom: 20px; 
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+   
+
+   
+   }
+   button {
+    background-color: blue;
+    color : white ;
+    border : solid 1px #ddd;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    margin: auto;
+    width : 40%;
+    justify-content: center;
+    font-size: larger;
+    font-weight: bold;
+    
+
+   }
+   select {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    width: 54%;
+    border-radius: 20px;
+    text-align: center;
+    border: solid 1px #ddd;
+    margin-bottom: 50px;
+   
+    
+
+   } */
+   
+  
+ 
+</style>
+<body>
+    <header class="header">
+        <h1>Bibliothèque</h1>
+        <ul>
+            <li><a href="cataloge.html">Retour</a></li>
+        </ul>
+    </header>
+    <main>
+        <form>
+    <h2>➕ Ajouter un nouveau livre</h2>
+    <input type="number" id="code" placeholder="Code du livre" required>
+    <input type="text" id="titre" placeholder="Titre du livre" required>
+    <input type="text" id="auteur" placeholder="Auteur" required>
+    <input type="number" id="annee" placeholder="Année" required>
+    <input type="number" id="prix" placeholder="Prix (en DH)" required>
+    <label for="disponible"> disponible</label>
+    <input type="checkbox" id="disponible">
+    <button type="submit">Ajouter</button>
+    </form>
+    </main>
+    <script src="script.js"></script>
+    </body>
+    </html>
