@@ -6,108 +6,84 @@
     <title>Bibliothèque</title>
 </head>
 <style>
-    /* body {
-        padding: 0;
-        margin: 0;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-        border-radius:20px  ;
+    body {
+background-color: green;
+padding: 0;
+margin: 0;
+
+ }
+ 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+        margin-right: 10px;
     }
-   .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: cornflowerblue;
-    color: white;
-    border-radius: 25px;
-    padding: 20px;
-    margin-bottom: 30px;
-   }
-   .header ul {
-    display: flex;
-    gap: 20px;
-    
-    text-align: center;
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
 
-   }
-   .header ul li {
-    list-style: none;
+
+    }
+    h2 {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: rgb(230, 209, 181);
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: bold;
+        
+    }
+     ul li a {
+        text-decoration: none;
+        /* list-style: none; */
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+        color: white;
+
+    }
+    ul li {
+        list-style: none;
+    }
+    form  input {
+        display: flex;
+        padding: 20px;
+        width: 50%;
+        border: solid 1px white;
+        border-radius: 40px;
+        margin: auto;
+        margin-bottom: 20px;
+
+
+    }
+    form label {
+     display: flex;
+     justify-content: center;
+     margin-bottom: 10px;
+     color: white;
+     font-size:large;
+     font-family: Arial, Helvetica, sans-serif;
+
+    }
+    button { 
+        background-color: blue;
+        color : white;
+        border-radius: 40px;
+        border : solid 1px blue ;
+        padding: 9px;
+        width: 50%;
+        font-size: large;
+        margin-left: 150px;
+    
+    }
+    
+        
+    
+
+    
    
-
-    
-   }
-   .header ul li a {
-    text-decoration: none;
-    color: black;
-    font-size: larger;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    
    
-   }
-   #form-livre {
-    max-width: 700px;
-    border-radius: 20px;
-    background-color: rgb(5, 60, 156);
-    padding: 30px ;
-    margin: auto;
-    margin-bottom: 40px;
-    color: white;
-
-    
-   }
-   h2 {
-    margin-bottom: 30px;
-    padding-bottom: 20px ;
-   }
-    
-   
-   input{
-    display: flex;
-    border-radius: 20px;
-    border:  solid 1px #ddd;
-    padding: 15px;
-    width: 50%;
-    display: flex;
-    margin : auto;
-    margin-bottom: 20px; 
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-
-   
-
-   
-   }
-   button {
-    background-color: blue;
-    color : white ;
-    border : solid 1px #ddd;
-    border-radius: 20px;
-    padding: 10px;
-    display: flex;
-    margin: auto;
-    width : 40%;
-    justify-content: center;
-    font-size: larger;
-    font-weight: bold;
-    
-
-   }
-   select {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    padding: 12px;
-    width: 54%;
-    border-radius: 20px;
-    text-align: center;
-    border: solid 1px #ddd;
-    margin-bottom: 50px;
-   
-    
-
-   } */
    
   
  
@@ -120,20 +96,18 @@
         </ul>
     </header>
     <main>
-        <form>
-    <h2>➕ Ajouter un nouveau livre</h2>
-    <input type="number" id="code" placeholder="Code du livre" required>
-    <input type="text" id="titre" placeholder="Titre du livre" required>
-    <input type="text" id="auteur" placeholder="Auteur" required>
-    <input type="number" id="annee" placeholder="Année" required>
-    <input type="number" id="prix" placeholder="Prix (en DH)" required>
+        <form class="form">
+    <h2> Ajouter un nouveau livre</h2>
+    <input type="number" id="code-id" placeholder="Code du livre" required>
+    <input type="text" id="titre-id" placeholder="Titre du livre" required>
+    <input type="text" id="auteur-id" placeholder="Auteur" required>
+    <input type="number" id="annee-id" placeholder="Année" required>
+    <input type="number" id="prix-id" placeholder="Prix (en DH)" required>
     <label for="disponible"> disponible</label>
-    <input type="checkbox" id="disponible">
+    <input type="checkbox" id="disponible-id">
     <button type="submit">Ajouter</button>
     </form>
-   <div class="liste">
- <div></div>
-   </div>
+  
   
     </main>
     <script src="script.js"></script>
