@@ -2,6 +2,9 @@ const bibliotheque = [];
 document.getElementById("ajouter").addEventListener("click",function(){
     window.open("ajouter.html");
 });
+
+
+
 function afficher() {
 
     let listes = document.getElementById("listeslivres");
@@ -28,7 +31,7 @@ btn.addEventListener("click", function() {
 });
     })
 
-    statistic();
+    statistic()
 }
 //creation de function supprimer
  function supprimer(code) {
@@ -43,6 +46,42 @@ btn.addEventListener("click", function() {
 afficher();
     
  }
+
+let search = document.getElementById("search");
+
+search.addEventListener("input", function() {
+    let text = search.value.toLowerCase();
+
+    // Filtrer les livres selon le texte tapé
+    let filtres = bibliotheque.filter(livre =>
+        livre.titre.toLowerCase().includes(text)
+    );
+
+    // Afficher uniquement les livres filtrés
+    let listes = document.getElementById("listeslivres");
+    listes.innerHTML = "";
+
+    filtres.forEach(livre => {
+        let carte = document.createElement("div");
+        listes.appendChild(carte);
+        carte.innerHTML = `
+            <h1>LE LIVRE</h1>
+            <p>Le Nom de livre ${livre.titre}</p>
+            <p>Le Nom de l'auteur ${livre.auteur}</p>
+            <p>L'année de sortie de livre ${livre.annee}</p>
+            <p>Le prix de livre ${livre.prix}</p>
+            <p>Status : ${livre.checkbox ? "disponible" : "pas disponible"}</p>
+        `;
+        let btn = document.createElement("button");
+        btn.textContent = "Supprimer";
+        carte.appendChild(btn);
+        btn.addEventListener("click", function() {
+            supprimer(livre.code);
+        });
+    });
+});
+
+
 function statistic() {
     let checkbox = 0;
     
@@ -54,8 +93,7 @@ function statistic() {
 
     document.getElementById("statistic").innerText = 
         `Disponibles : ${checkbox} , Total : ${bibliotheque.length}`;
-
-      
+ 
 }
    
 
@@ -66,4 +104,7 @@ afficher();
 
 
 
+
  afficher();
+
+

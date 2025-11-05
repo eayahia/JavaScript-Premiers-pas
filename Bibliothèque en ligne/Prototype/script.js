@@ -1,11 +1,11 @@
 let form = document.querySelector("form");
 form.addEventListener(("submit"),function(E){
     E.preventDefault()
-let code = Number(document.getElementById("code").value);
+let code = document.getElementById("code").value;
 let titre = document.getElementById("titre").value;
 let auteur = document.getElementById("auteur").value;
-let annee = Number(document.getElementById("annee").value);
-let prix = Number(document.getElementById("prix").value);
+let annee = document.getElementById("annee").value;
+let prix = document.getElementById("prix").value;
 let checkbox = document.getElementById("disponible").checked;
 
 let livre={
