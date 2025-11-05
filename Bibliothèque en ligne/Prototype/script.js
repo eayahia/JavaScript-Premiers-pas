@@ -16,10 +16,10 @@ if (window.opener && !window.opener.closed){
     window.opener.ajouter(livre);
     alert("livre ajoute");
     window.close();
-
-    
-}else{
+}
+else{
     alert("pas ajoute");
 }
-ajouter() ;
+
 });
+ajouter() ;
