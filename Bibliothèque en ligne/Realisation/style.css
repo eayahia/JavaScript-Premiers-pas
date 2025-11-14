@@ -152,17 +152,17 @@ header > div {
     padding: 8px 15px;
     margin-top: 15px;
     margin-left: 10px;
-    background-color: var(--couleur-tertiaire); 
+    background-color: var(--couleur-supprimer); 
     color: white;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     font-weight: 600;
-    transition: background-color 0.2s;
+
 }
 
 .btn-sup:hover {
-    background-color: #555;
+    background-color: #c20303;
 }
 
 
@@ -217,7 +217,7 @@ width: 30%;
 text-align: center;
 
 }
-button {
+form button {
    display: flex;
     background-color: #0056b3;
     color: white;
