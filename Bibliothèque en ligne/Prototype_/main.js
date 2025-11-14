@@ -16,7 +16,7 @@ function afficher(filtres = bibliotheque) {
 
     filtres.forEach(livre=>{
     let carte = document.createElement("div");
-    carte.classList.add("carte")
+    carte.classList.add("carte");
     listes.appendChild(carte);
     carte.innerHTML =
      `<h1>LE LIVRE </h1>
@@ -29,10 +29,11 @@ function afficher(filtres = bibliotheque) {
 let btn = document.createElement("button");
 btn.classList.add("btn")
 btn.textContent="Supprimer";
+
 carte.appendChild(btn);
 btn.addEventListener("click", function() {
     supprimer(livre.code);
-
+ 
     
 });
     })
@@ -42,6 +43,7 @@ btn.addEventListener("click", function() {
 //creation de function supprimer
  function supprimer(code) {
     for (let i = 0; i < bibliotheque.length; i++) {
+      
         if (bibliotheque[i].code===code) {
 
             bibliotheque.splice(i,1);
@@ -91,5 +93,3 @@ afficher(bibliotheque);
 
 
  afficher();
-
-

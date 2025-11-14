@@ -1,6 +1,6 @@
 let form = document.querySelector("form");
-form.addEventListener(("submit"),function(E){
-    E.preventDefault();
+form.addEventListener(("submit"), function(E) {
+E.preventDefault() ;
 let code = document.getElementById("code-id").value;
 let titre = document.getElementById("titre-id").value;
 let auteur = document.getElementById("auteur-id").value;
@@ -12,14 +12,16 @@ let livre ={
     code,titre,auteur,annee,prix,checkbox
 }
 
-if (window.opener){
+if (window.opener ) {
     window.opener.ajouter(livre);
-    alert("livre ajoute");
+    alert("le livre ajoute");
     window.close();
 }
 else{
-    alert("pas ajoute");
+    alert("le livre pas ajoute");
 }
 
-});
-ajouter() ;
+})
+ajouter ();
+
+// && typeof window.opener.ajouter === 'function'

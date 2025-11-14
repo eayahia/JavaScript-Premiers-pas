@@ -1,0 +1,235 @@
+:root {
+    --couleur-primaire: #001f3f; 
+    --couleur-secondaire: #333333; 
+    --couleur-tertiaire: #777777; 
+    --couleur-fond: #eeeeee; 
+    --couleur-carte: #ffffff; 
+    --couleur-action: #007bff; 
+    --couleur-supprimer: #dc3545; 
+    --couleur-disponible: #28a745; 
+}
+
+
+body {
+    background-color: var(--couleur-fond);
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--couleur-secondaire);
+}
+
+
+header {
+    background-color: var(--couleur-primaire); 
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+    gap: 15px; 
+    padding: 20px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#h {
+    font-size: 2em; 
+    font-weight : 300;
+    color: white;
+    margin-right: 20px;
+}
+
+#ajouter, #trier { 
+    padding: 10px 15px;
+    border-radius: 5px; 
+    width: auto;
+    background-color: var(--couleur-action);
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap; 
+}
+#ajouter:hover, #trier:hover {
+    background-color: #0056b3;
+}
+
+header > div {
+    flex-grow: 1; 
+    max-width: 300px;
+}
+
+#search {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--couleur-secondaire);
+}
+
+#search:focus {
+    border-color: var(--couleur-action);
+}
+.container-stats-expensive { 
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap; 
+}
+
+#statistic, #plusCher {
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--couleur-primaire);
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    flex-basis: 350px; 
+    max-width: 45%;
+}
+
+#listeslivres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 40px 20px;
+    justify-content: center;
+}
+
+.carte {
+    background-color: var(--couleur-carte);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 5px solid var(--couleur-tertiaire); 
+}
+
+.carte:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-left-color: var(--couleur-primaire); 
+}
+
+.carte h1 {
+    font-size: 1.4em;
+    color: var(--couleur-primaire); 
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.carte p {
+    font-size: 1em;
+    line-height: 1.4;
+    margin: 6px 0;
+}
+
+.resv {
+    padding: 8px 15px;
+    margin-top: 15px;
+    background-color: var(--couleur-action); 
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.resv:hover {
+    background-color: #0056b3;
+}
+
+.btn-sup {
+    padding: 8px 15px;
+    margin-top: 15px;
+    margin-left: 10px;
+    background-color: var(--couleur-tertiaire); 
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-sup:hover {
+    background-color: #555;
+}
+
+
+.carte p span[style*="color: red"] {
+    font-weight: 700;
+    color: var(--couleur-supprimer) !important; 
+    background-color: #f8d7da;
+    padding: 2px 6px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.carte p span[style*="color: green"] {
+    font-weight: 700;
+    color: var(--couleur-disponible) !important;
+    background-color: #d4edda;
+    padding: 2px 6px;
+    border-radius: 3px;
+    display: inline-block;
+}
+#B {
+     font-size: 2em;
+    font-weight: 300;
+    color: white;
+    margin-right: 20px;
+}
+ul li {
+    list-style: none;
+    font-size: larger;
+    font-weight: 300;
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+    
+}
+a {
+    text-decoration: none;
+}
+h2 {
+    display: flex;
+    justify-content: center;
+}
+form input {
+ display: flex;
+ margin: auto;
+ padding: 16px;
+border: 1px solid #ddd;
+border-radius: 40px;
+margin-bottom: 10px;
+width: 30%;
+text-align: center;
+
+}
+button {
+   display: flex;
+    background-color: #0056b3;
+    color: white;
+    padding: 15px;
+    border-radius: 40px;
+    width: 20%;
+    border: solid 1px #0056b3;
+    margin: auto;
+    justify-content: center;
+}
+form label {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+}
